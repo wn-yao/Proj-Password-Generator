@@ -33,6 +33,7 @@ var lowerCase = ["a", "b", "c", "d", "e", "f", 'g', "h", "i", "j", "k", "l", "m"
 var upperCase = ["A", "B", "C", "D", "E", "F", 'G', "H", "I", "J", "K", "L", "M", "N", "O", "p", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]; //26
 var numericNum = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]; //10
 var specialChar = ["@", "#", "*", "!", "&", "5"]; //6
+// prompts for questions 
 
  function displayPrompts() {
     lowerCase = confirm("Click Ok if you would like to have lower case letters in your password.");
@@ -41,7 +42,7 @@ var specialChar = ["@", "#", "*", "!", "&", "5"]; //6
     specialChar = confirm("Click Ok if you would like to have special characters in your password.");
  }
 
- 
+
 //validate input
 //gerate password per the criteria input
 //display password onto the page
