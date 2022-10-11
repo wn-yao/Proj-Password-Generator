@@ -31,11 +31,17 @@ function generatePassword() {
 var numCharacter = Number (prompt ("How many characters would you like your password to contain? Chose between 8 - 128."));
 var lowerCase = ["a", "b", "c", "d", "e", "f", 'g', "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]; //26
 var upperCase = ["A", "B", "C", "D", "E", "F", 'G', "H", "I", "J", "K", "L", "M", "N", "O", "p", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]; //26
-var numericnum = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]; //10
+var numericNum = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]; //10
 var specialChar = ["@", "#", "*", "!", "&", "5"]; //6
 
+ function displayPrompts() {
+    lowerCase = confirm("Click Ok if you would like to have lower case letters in your password.");
+    upperCase = confirm("Click Ok if you would like to have upper case letters in your password.");
+    numericNum = confirm("Click Ok if you would like to have numeric numbers in your password.");
+    specialChar = confirm("Click Ok if you would like to have special characters in your password.");
+ }
+
  
-  
 //validate input
 //gerate password per the criteria input
 //display password onto the page
