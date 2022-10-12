@@ -21,13 +21,9 @@ generateBtn.addEventListener("click", writePassword);
    // at least one character type should be selected
 //3. Generate passworo on to the web page
 
-function generatePassword() {
-  /////////////////////////// WRITE YOUR CODE HERE /////////////////////////
-  //prompt to start
-  passwordLen = prompt("How many characters would you like your password to contain?");
-
-  //declare varables for password length, lowercase letters, uppercase letters, numberic, and special character for pasword criteria
-  var passwordLen;
+//declare varables for password length, lowercase letters, uppercase letters, numberic, and special character for pasword criteria
+  //better to be global variavble
+  var passwordLenCriteria = 0;
   var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
   //test the array assignments and lenghth
   //console.log(lowerCase);
@@ -40,5 +36,30 @@ function generatePassword() {
   //console.log(numericNum);
   var specialChar = ['!', "#", "%", "&", "*", "+", "/", "<", ">", "@", "~"]; //11
   //check if specialChar is set correctly
-  console.log(specialChar);
-}
+  //0console.log(specialChar);
+
+function generatePassword() {
+  /////////////////////////// WRITE YOUR CODE HERE /////////////////////////
+  //prompt to start
+  var passwordStart = parseInt(prompt("How many characters would you like your password to contain?"));
+
+  //variables to collect user inputs
+  var uCase;
+  var lCase;
+  var numbers;
+  var specialCharacter; 
+  
+  if (passwordStart < 8 || passwordStart> 128) { 
+    alert("Must select between 8 to 128.");
+    return;
+  }
+   uCase =confirm("Would you like to use upper case letters in your password?");
+    lCase =confirm("Would you like to use lower case letters in your password?");
+    numbers=confirm("Would you like to use numbers in your password?");
+    specialCharacter=confirm("Would you like to use special characters in your password?");
+  } if (!uCase && !lCase && !numbers && !specialCharacter) {
+    //alert("At least one crtiera needs to be selected");
+  //}
+
+
+  }
