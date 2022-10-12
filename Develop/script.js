@@ -23,7 +23,7 @@ generateBtn.addEventListener("click", writePassword);
 
 //declare varables for password length, lowercase letters, uppercase letters, numberic, and special character for pasword criteria
   //better to be global variavble
-  var passwordLenCriteria = 0;
+  var passwordLen;
   var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
   //test the array assignments and lenghth
   //console.log(lowerCase);
@@ -41,25 +41,33 @@ generateBtn.addEventListener("click", writePassword);
 function generatePassword() {
   /////////////////////////// WRITE YOUR CODE HERE /////////////////////////
   //prompt to start
-  var passwordStart = parseInt(prompt("How many characters would you like your password to contain?"));
+  var passwordLenCriteria = parseInt(prompt("How many characters would you like your password to contain?"));
 
   //variables to collect user inputs
   var uCase;
   var lCase;
   var numbers;
   var specialCharacter; 
+  var result;
   
-  if (passwordStart < 8 || passwordStart> 128) { 
+  if (passwordLenCriteria < 8 || passwordLenCriteria> 128) { 
     alert("Must select between 8 to 128.");
     return;
   }
-   uCase =confirm("Would you like to use upper case letters in your password?");
+    uCase =confirm("Would you like to use upper case letters in your password?");
     lCase =confirm("Would you like to use lower case letters in your password?");
     numbers=confirm("Would you like to use numbers in your password?");
     specialCharacter=confirm("Would you like to use special characters in your password?");
-  } if (!uCase && !lCase && !numbers && !specialCharacter) {
-    //alert("At least one crtiera needs to be selected");
-  //}
+  if (!uCase && !lCase && !numbers && !specialCharacter) {
+    alert("At least one crtiera needs to be selected");
+  } 
 
 
-  }
+
+//if only uppercase selected, return password to user input # (length) for uppercase 
+//if both  uppercase and lower selected, retrun password to user input # (length) of uppercase and lowercase letter
+//if uppercase, lowercase and numbers are selected, retrun password to user input # (length) with selection
+//if all selected, retrun password to user inpput # (length) with all selection
+//start again 
+
+}
