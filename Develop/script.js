@@ -54,17 +54,23 @@ function generatePassword() {
     alert("Must select between 8 to 128.");
     return;
   }
-    uCase =confirm("Would you like to use upper case letters in your password?");
-    lCase =confirm("Would you like to use lower case letters in your password?");
-    numbers=confirm("Would you like to use numbers in your password?");
-    specialCharacter=confirm("Would you like to use special characters in your password?");
-  if (!uCase && !lCase && !numbers && !specialCharacter) {
+    upperCase =confirm("Would you like to use upper case letters in your password?");
+    lowerCase =confirm("Would you like to use lower case letters in your password?");
+    numericNum=confirm("Would you like to use numbers in your password?");
+    specialChar=confirm("Would you like to use special characters in your password?");
+  if (!upperCase && !lowerCase && !numericNum && !specialChar) {
     alert("At least one crtiera needs to be selected");
   } 
 
-
-
-//if only uppercase selected, return password to user input # (length) for uppercase 
+//if o
+if (upperCase) {
+  uCase = upperCase
+}
+for (i=0; i < passwordLenCriteria; i++){
+  var userSelect = uCase[Math.floor(Math.random(upperCase)*upperCase.length)];
+  result.push(userSelect);
+}
+console.log(result);
 //if both  uppercase and lower selected, retrun password to user input # (length) of uppercase and lowercase letter
 //if uppercase, lowercase and numbers are selected, retrun password to user input # (length) with selection
 //if all selected, retrun password to user inpput # (length) with all selection
