@@ -19,11 +19,10 @@ generateBtn.addEventListener("click", writePassword);
    // criteria lowercase, uppercase, numeric number, and special characters
 //2. Validate the input 
    // at least one character type should be selected
-//3. Generate passworo on to the web page
+//3. Generate passworod on to the web page
 
 //declare varables for password length, lowercase letters, uppercase letters, numberic, and special character for pasword criteria
   //better to be global variavble
-  var passwordLen;
   var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
   //test the array assignments and lenghth
   //console.log(lowerCase);
@@ -48,32 +47,34 @@ function generatePassword() {
   var lCase;
   var numbers;
   var specialCharacter; 
-  var result;
+
+  //variable to hold new strings with user inputs 
+  var availableCharacter = [];
+  //variable to hold resultss
+  var result = [];
   
   if (passwordLenCriteria < 8 || passwordLenCriteria> 128) { 
     alert("Must select between 8 to 128.");
     return;
   }
-    upperCase =confirm("Would you like to use upper case letters in your password?");
-    lowerCase =confirm("Would you like to use lower case letters in your password?");
-    numericNum=confirm("Would you like to use numbers in your password?");
-    specialChar=confirm("Would you like to use special characters in your password?");
-  if (!upperCase && !lowerCase && !numericNum && !specialChar) {
+
+  //prompts to ask user if they would like to include these criteria in password
+
+    uCase =confirm("Would you like to use upper case letters in your password?");
+    lCase =confirm("Would you like to use lower case letters in your password?");
+    numbers=confirm("Would you like to use numbers in your password?");
+    specialCharacter=confirm("Would you like to use special characters in your password?");
+
+  //condition for at least one criteria needs to be selected 
+
+  if (!uCase && !lCase && !numbers && !specialCharacter) {
     alert("At least one crtiera needs to be selected");
   } 
+//if uppercase selected - avaialbe characters
+//if lower selected - available characters
+//if number selected - available characters
+//if special character selected - available characters 
 
-//if o
-if (upperCase) {
-  uCase = upperCase
-}
-for (i=0; i < passwordLenCriteria; i++){
-  var userSelect = uCase[Math.floor(Math.random(upperCase)*upperCase.length)];
-  result.push(userSelect);
-}
-console.log(result);
-//if both  uppercase and lower selected, retrun password to user input # (length) of uppercase and lowercase letter
-//if uppercase, lowercase and numbers are selected, retrun password to user input # (length) with selection
-//if all selected, retrun password to user inpput # (length) with all selection
-//start again 
+
 
 }
