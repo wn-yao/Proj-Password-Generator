@@ -30,7 +30,7 @@ generateBtn.addEventListener("click", writePassword);
   var upperCase = lowerCase.map(lowerCase => lowerCase.toUpperCase());
   //check if lowerCase letters have been converted to upperCaseLetters
   //console.log(upperCase);'
-  var numericNum = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+  var numericNum = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
   //check if numeric numbers are listed
   //console.log(numericNum);
   var specialChar = ['!', "#", "%", "&", "*", "+", "/", "<", ">", "@", "~"]; //11
@@ -91,7 +91,15 @@ if (specialCharacter){
   availableCharacter = availableCharacter.concat(specialChar);
 }
 
-//console.log(availableCharacter) checked if availableCharacter has all characters in the string
+//console.log(availableCharacter) //checked if availableCharacter has all characters in the string
 
+//using userinput numbers (passwordLenCriteria) to randomly select available characters to make the password.
 
+for (i=0; i < passwordLenCriteria; i++) {
+  var userInputNumbers = availableCharacter[Math.floor(Math.random()*availableCharacter.length)];
+  result.push(userInputNumbers);
+  
+}
+console.log(result) //checked to see if it's giving correct length and inlclude all characters selected
+//return result.join("")
 }
