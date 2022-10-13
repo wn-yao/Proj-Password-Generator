@@ -75,6 +75,23 @@ function generatePassword() {
 //if number selected - available characters
 //if special character selected - available characters 
 
+if (uCase){
+  availableCharacter = availableCharacter.concat(upperCase);
+}
+
+if (lCase){
+  availableCharacter = availableCharacter.concat(lowerCase);
+}
+
+if (numbers){
+  availableCharacter = availableCharacter.concat(numericNum);
+}
+
+if (specialCharacter){
+  availableCharacter = availableCharacter.concat(specialChar);
+}
+
+//console.log(availableCharacter) checked if availableCharacter has all characters in the string
 
 
 }
