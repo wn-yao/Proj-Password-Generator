@@ -77,29 +77,48 @@ function generatePassword() {
 
 if (uCase){
   availableCharacter = availableCharacter.concat(upperCase);
+  //get uppercase character inside a var
+  // get a upperCase char into new var. 
+  var oneUpCase = upperCase[Math.floor(Math.random()*upperCase.length)];
 }
 
 if (lCase){
   availableCharacter = availableCharacter.concat(lowerCase);
+  // get a lowerCase char into new var randomly from lowercase
+  var oneLoCase = lowerCase[Math.floor(Math.random()*lowerCase.length)];
+
 }
 
 if (numbers){
   availableCharacter = availableCharacter.concat(numericNum);
+  var OneNum = numericNum[Math.floor(Math.random()*numericNum.length)];
 }
 
 if (specialCharacter){
   availableCharacter = availableCharacter.concat(specialChar);
+  var oneSpecialChar = specialChar[Math.floor(Math.random()*specialChar.length)];
 }
+
+// new varible = ['A', 'a', 1, '%']
+var mustHaveCharacter =[];
+mustHaveCharacter = mustHaveCharacter.concat(oneUpCase, oneLoCase, OneNum, oneSpecialChar);
+console.log(mustHaveCharacter);
 
 //console.log(availableCharacter) //checked if availableCharacter has all characters in the string
 
 //using userinput numbers (passwordLenCriteria) to randomly select available characters to make the password.
 
-for (i=0; i < passwordLenCriteria; i++) {
+// 8 lenghts of password
+for (i=0; i < passwordLenCriteria - mustHaveCharacter.length; i++) {
   var userInputNumbers = availableCharacter[Math.floor(Math.random()*availableCharacter.length)];
   result.push(userInputNumbers);
   
 }
-console.log(result) //checked to see if it's giving correct length and inlclude all characters selected
-//return result.join("")
+
+// result = [1, 2, 3, 'a'] if passwordLenCriteria === 8
+// result = result.concat(new variable)
+
+//console.log(result) //checked to see if it's giving correct length and inlclude all characters selected
+//wored with tutor to use join mehtod to get rid of the white space and return password onto the page
+return result.join("")
 }
