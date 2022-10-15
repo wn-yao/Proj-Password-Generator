@@ -50,3 +50,10 @@ Class TA Jehyun Jung.
 
 Please refer to MIT License.
 
+## Deployed Application and Screenshot
+
+https://wn-yao.github.io/Proj-Password-Generator/
+
+![Screenshot_Deployedpage](./assets/images/)
+
+
