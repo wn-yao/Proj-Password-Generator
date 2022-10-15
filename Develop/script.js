@@ -22,7 +22,7 @@ generateBtn.addEventListener("click", writePassword);
 //3. Generate passworod on to the web page
 
 //declare varables for password length, lowercase letters, uppercase letters, numberic, and special character for pasword criteria
-  //better to be global variavble
+  //better to be global variavble per TA's suggestion
   var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
   //test the array assignments and lenghth
   //console.log(lowerCase);
@@ -107,7 +107,7 @@ if (specialCharacter){
 
 
 // new varible = ['A', 'a', 1, '%']
-console.log(mustHaveCharacter); //verified mustHaveCharacter worked with userinput
+//console.log(mustHaveCharacter); //verified mustHaveCharacter worked with userinput
 
 //console.log(availableCharacter) //checked if availableCharacter has all characters in the string
 
@@ -130,7 +130,7 @@ for (i=0; i < passwordLenCriteria - mustHaveCharacter.length; i++) {
 
 //console.log(result) //checked to see if it's giving correct length and inlclude all characters selected
 //wored with tutor to use join mehtod to get rid of the white space and return password onto the page
-console.log(randomCharacter);
+//console.log(randomCharacter);
 }
 result=randomCharacter.concat(mustHaveCharacter);
 return result.join("");}
