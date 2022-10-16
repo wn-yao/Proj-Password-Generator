@@ -52,7 +52,7 @@ Please refer to MIT License.
 
 ## Deployed Application and Screenshot
 
-https://wn-yao.github.io/Proj-Password-Generator/
+https://wn-yao.github.io/Proj-Password-Generator/Develop/
 
 ![Screenshot](https://github.com/wn-yao/Proj-Password-Generator/blob/main/assets/images/Screenshot.jpg)
 
