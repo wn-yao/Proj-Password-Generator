@@ -54,6 +54,6 @@ Please refer to MIT License.
 
 https://wn-yao.github.io/Proj-Password-Generator/
 
-![Screenshot_Deployedpage](./assets/images/)
+![Screenshot](https://github.com/wn-yao/Proj-Password-Generator/blob/main/assets/images/Screenshot.jpg)
 
 
